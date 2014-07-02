@@ -115,14 +115,16 @@ body {
          border: none; padding: 0px; margin: 0px;
       }
 
-      .gallery-row>* {
-         padding: 0px;
+      .gallery-row {
+         &>* { padding: 0px; }
+         
+         padding-bottom: 0px;
       }
 
       .box {
-         padding:6px;
-         margin-right:4px;
-         border:1px solid #ddd;
+         padding: 6px;
+         margin-right: 10px;
+         border: 1px solid #ddd;
 
          img { width: 100%; }
          .thumbnail {
