@@ -77,3 +77,6 @@ function roots_display_sidebar() {
  * Default: 1140px is the default Bootstrap container width.
  */
 if (!isset($content_width)) { $content_width = 1140; }
+
+/* Enables Roots_Nav_Walker */
+//add_filter('wp_nav_menu_args', 'roots_nav_menu_args');

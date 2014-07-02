@@ -47,6 +47,14 @@ body {
             color: #777;
          }
       } 
+
+      /* Disable submenus */
+      .sub-menu { display: none; }
+      .active .sub-menu { display: block; }
+      .sub-menu, .sub-menu li {
+         list-style-type: none;
+         padding: 0.3em 0.5em;
+      }
    }
 
 }
@@ -58,7 +66,7 @@ body {
    ========================================================================== */
 
 .banner {
-   height: 106px;
+   height: 116px;
    background-repeat: no-repeat;
    background-color: #fff;
    background-image: -moz-linear-gradient(#fff, #dbe2e7);
@@ -69,13 +77,13 @@ body {
    -webkit-background-size: 100% 90px;
    -moz-background-size: 100% 90px;
    -o-background-size: 100% 90px;
-   background-size: 100% 106px;
+   background-size: 100%;
 
    .navbar-header {
       font-size: 0px; text-indent: -9999px;
       background: url(http://geneticresearch.ch/pics/fogefo_rgb.png) no-repeat top left;
       width: 281px; height: 97px;
-      margin-top: 5px;
+      margin-top: 10px;
    }
 }
 
@@ -132,7 +140,26 @@ body {
    font-size: 12px;
 }
 
+.widget_polylang {
 
+   position: absolute;
+   top: 50px;
+   right: 100px;
+   z-index: 1000;
+
+   li.lang-item {
+      list-style: none;
+      float: left;
+      padding: 0 0.5em;
+   }
+   li.lang-item:first-child {
+      border-right: 1px solid #999;
+   }
+   .current-lang {
+      font-weight: bold;
+   }
+   a { color:#777; }
+}
 
 /* ==========================================================================
    WordPress Generated Classes
