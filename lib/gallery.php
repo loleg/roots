@@ -48,8 +48,8 @@ function roots_gallery($attr) {
   ), $attr));
 
   $id = intval($id);
-  $columns = (12 % $columns == 0) ? $columns: 4;
-  $grid = sprintf('col-sm-%1$s col-lg-%1$s', 12/$columns);
+  $columns = (16 % $columns == 0) ? $columns: 4;
+  $grid = sprintf('col-sm-%1$s col-lg-%1$s', 16/$columns);
 
   if ($order === 'RAND') {
     $orderby = 'none';
@@ -97,13 +97,21 @@ function roots_gallery($attr) {
         break;
     }
     $output .= ($i % $columns == 0) ? '<div class="row gallery-row">': '';
-    $output .= '<div class="' . $grid .'">' . $image;
+    $output .= '<div class="' . $grid .'"><div class="box">' . $image;
 
-    if (trim($attachment->post_excerpt)) {
-      $output .= '<div class="caption hidden">' . wptexturize($attachment->post_excerpt) . '</div>';
+    if (trim($attachment->post_title)) {
+      $output .= '<div class="title">' . wptexturize($attachment->post_title) . '</div>';
     }
 
-    $output .= '</div>';
+    if (trim($attachment->post_excerpt)) {
+      $output .= '<div class="caption">' . wptexturize($attachment->post_excerpt) . '</div>';
+    }
+
+    if (trim($attachment->post_content)) {
+      $output .= '<a class="more" href="' . get_permalink( $attachment->ID ) . '">' . wptexturize($attachment->post_content) . '</a>';
+    }
+
+    $output .= '</div></div>';
     $i++;
     $output .= ($i % $columns == 0) ? '</div>' : '';
   }

@@ -7,6 +7,8 @@
     </div>
   <![endif]-->
 
+  <link href="//cdnjs.cloudflare.com/ajax/libs/ekko-lightbox/3.0.3a/ekko-lightbox.min.css" rel="stylesheet">
+
   <?php
     do_action('get_header');
     // Use Bootstrap's navbar if enabled in config.php
@@ -36,6 +38,18 @@
   </div><!-- /.wrap -->
 
   <?php get_template_part('templates/footer'); ?>
+
+<script src="//cdnjs.cloudflare.com/ajax/libs/ekko-lightbox/3.0.3a/ekko-lightbox.min.js"></script>
+<script language="JavaScript">
+  $('a.thumbnail,.thumbnail>a').click(function (e) {
+    e.preventDefault();
+    var caption = $(this).parent().find('.caption').text();
+    var title = $(this).find('img').attr('alt');
+    $(this).attr('data-footer', caption);
+    $(this).attr('data-title', title);
+    $(this).ekkoLightbox();
+  });
+</script>
 
 </body>
 </html>
