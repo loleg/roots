@@ -13,12 +13,15 @@
     if (current_theme_supports('bootstrap-top-navbar')) {
       get_template_part('templates/header-top-navbar');
     } else {
-      get_template_part('templates/header');
+      get_template_part('templates/header-top-basic');
     }
   ?>
 
   <div class="wrap container" role="document">
     <div class="content row">
+      <div class="col-md-3">
+        <?php get_template_part('templates/sidebar-nav'); ?>
+      </div>
       <main class="main <?php echo roots_main_class(); ?>" role="main">
         <?php include roots_template_path(); ?>
       </main><!-- /.main -->

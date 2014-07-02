@@ -8,7 +8,48 @@
    Base
    ========================================================================== */
 
-body { }
+body {
+
+   .navbar-default {
+      background-color: inherit; 
+      
+      .navbar-nav>li {
+         border-bottom: 1px solid #ccc;
+         float: none;
+         display: block;
+         width: 100%;
+
+         &>a:hover {
+            background: #fcfcfc;
+            color: #777;
+         }
+
+         &>a {
+            background: inherit;
+            color: #111;
+         }
+      }
+
+      .navbar-nav>.active>a, .dropdown-menu>.active>a {
+         background: #eee;
+         color: #000;
+         &:hover, &:focus {
+            background: #eee;
+            color: #777;
+         }
+      } 
+
+      .navbar-nav>.open>a, .dropdown-menu>li>a {
+         background: #fcfcfc;
+         color: #000;
+         &:hover, &:focus {
+            background: #fcfcfc;
+            color: #777;
+         }
+      } 
+   }
+
+}
 
 
 
@@ -16,8 +57,27 @@ body { }
    Header
    ========================================================================== */
 
-.banner { }
+.banner {
+   height: 106px;
+   background-repeat: no-repeat;
+   background-color: #fff;
+   background-image: -moz-linear-gradient(#fff, #dbe2e7);
+   background-image: -webkit-gradient(linear, 0% 0%, 0% 100%, from(#fff), to(#dbe2e7));
+   background-image: -webkit-linear-gradient(#fff, #dbe2e7);
+   background-image: -o-linear-gradient(#fff, #dbe2e7);
+   background-image: linear-gradient(#ffffff,#dbe2e7);
+   -webkit-background-size: 100% 90px;
+   -moz-background-size: 100% 90px;
+   -o-background-size: 100% 90px;
+   background-size: 100% 106px;
 
+   .navbar-header {
+      font-size: 0px; text-indent: -9999px;
+      background: url(http://geneticresearch.ch/pics/fogefo_rgb.png) no-repeat top left;
+      width: 281px; height: 97px;
+      margin-top: 5px;
+   }
+}
 
 
 /* ==========================================================================
@@ -63,7 +123,14 @@ body { }
    Footer
    ========================================================================== */
 
-.content-info { }
+.content-info {
+   color: #864d4d;
+   min-height: 7em;
+   padding-top: 2em;
+   background: #510000;
+   font-family: Tahoma,Sans-serif;
+   font-size: 12px;
+}
 
 
 

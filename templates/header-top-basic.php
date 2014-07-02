@@ -1,0 +1,7 @@
+<header class="banner navbar navbar-default navbar-static-top" role="banner">
+  <div class="container">
+    <div class="navbar-header">
+      <a class="navbar-brand" href="<?php echo home_url(); ?>/"><?php bloginfo('name'); ?></a>
+    </div>
+  </div>
+</header>
