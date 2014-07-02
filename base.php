@@ -19,9 +19,11 @@
 
   <div class="wrap container" role="document">
     <div class="content row">
+      <?php if (roots_display_sidebar()) : ?>
       <div class="col-md-3">
         <?php get_template_part('templates/sidebar-nav'); ?>
       </div>
+      <?php endif; ?>
       <main class="main <?php echo roots_main_class(); ?>" role="main">
         <?php include roots_template_path(); ?>
       </main><!-- /.main -->

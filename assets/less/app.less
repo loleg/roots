@@ -12,7 +12,8 @@ body {
 
    .navbar-default {
       background-color: inherit; 
-      
+      padding: 0;
+
       .navbar-nav>li {
          border-bottom: 1px solid #ccc;
          float: none;
@@ -51,6 +52,7 @@ body {
       /* Disable submenus */
       .sub-menu { display: none; }
       .active .sub-menu { display: block; }
+      .active > a { color: #222; }
       .sub-menu, .sub-menu li {
          list-style-type: none;
          padding: 0.3em 0.5em;
@@ -134,6 +136,7 @@ body {
 .content-info {
    color: #864d4d;
    min-height: 7em;
+   margin-top: 4em;
    padding-top: 2em;
    background: #510000;
    font-family: Tahoma,Sans-serif;
